@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const explorerSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -6,4 +6,4 @@ const explorerSchema = new mongoose.Schema({
   expeditionsParticipated: { type: Number, default: 0 }
 });
 
-module.exports = mongoose.model("Explorer", explorerSchema);
+export default mongoose.model("Explorer", explorerSchema);

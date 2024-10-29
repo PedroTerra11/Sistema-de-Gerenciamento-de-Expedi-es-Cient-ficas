@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const expeditionSchema = new mongoose.Schema({
   location: { type: String, required: true },
@@ -7,4 +7,6 @@ const expeditionSchema = new mongoose.Schema({
   speciesFound: [{ type: mongoose.Schema.Types.ObjectId, ref: "Species" }]
 });
 
-module.exports = mongoose.model("Expedition", expeditionSchema);
+const Expedition = mongoose.model("Expedition", expeditionSchema);
+
+export default Expedition;

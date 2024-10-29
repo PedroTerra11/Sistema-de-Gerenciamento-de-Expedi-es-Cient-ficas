@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const speciesSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -7,4 +7,4 @@ const speciesSchema = new mongoose.Schema({
   documented: { type: Boolean, default: false }
 });
 
-module.exports = mongoose.model("Species", speciesSchema);
+export default mongoose.model("Species", speciesSchema);
